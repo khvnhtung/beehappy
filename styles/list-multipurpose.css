@@ -1,0 +1,126 @@
+/* MOOD TRACKING JOURNAL - LIST- MULTIPURPOSE */
+
+.mood-slider-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.mood-slider {
+    -webkit-appearance: none; /* Override default appearance */
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3; /* Light grey background */
+    outline: none;
+    transition: background 0.2s;
+}
+
+/* Custom styles for the slider thumb */
+.mood-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; /* Round shape */
+    background: #4CAF50; /* Green color */
+    cursor: pointer;
+}
+
+.mood-slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; /* Round shape */
+    background: #4CAF50; /* Green color */
+    cursor: pointer;
+}
+
+/* Styles for the mood emoji */
+.mood-emoji {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+/* Styles for the other mood input field */
+.other-mood {
+    display: none;
+    margin: 10px 0;
+}
+
+.other-mood input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Styles for the checkbox */
+.checkbox-container {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.label-button {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.label-button.selected {
+    background: linear-gradient(45deg, #FF6E7F, #BFE9FF);
+    color: white;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-top: 20px;
+}
+.card-style .content {
+line-height: normal; /* Adjust line height */
+}
+
+.card-style .content h1, .card-style .content p {
+margin-bottom: 10px; /* Reduce bottom margin */
+}
+
+#weatherInfo, #weatherCondition {
+margin-bottom: 10px; /* Reduce bottom margin for weather info */
+}
+
+.custom-slider {
+-webkit-appearance: none;
+width: 100%;
+height: 25px;
+background: #ddd;
+outline: none;
+opacity: 0.7;
+-webkit-transition: .2s;
+transition: opacity .2s;
+border-radius: 25px;
+}
+
+.custom-slider::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 25px;
+height: 25px;
+background: #4CAF50;
+cursor: pointer;
+border-radius: 50%;
+}
+
+.custom-slider::-moz-range-thumb {
+width: 25px;
+height: 25px;
+background: #4CAF50;
+cursor: pointer;
+border-radius: 50%;
+}
+

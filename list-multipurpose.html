@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>BeeHappy</title>
+<link rel="stylesheet" type="text/css" href="styles/list-multipurpose.css">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
+<link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+<link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+<link rel="stylesheet" class="page-highlight" type="text/css" href="styles/highlights/highlight_yellow.css">
+
+
+</head>
+
+<body class="theme-light">
+<div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
+
+<div id="page">
+
+    <div class="header header-auto-show header-fixed header-logo-app">
+        <a href="#" data-back-button class="header-title font-13">Tâm trạng hiện tại của bạn là gì?</a>
+        <a href="#" data-back-button class="header-icon header-icon-1"><i class="fa fa-chevron-left font-11"></i></a>
+        <a href="#" data-toggle-theme class="header-icon header-icon-2 show-on-theme-dark"><i class="fas fa-sun"></i></a>
+        <a href="#" data-toggle-theme class="header-icon header-icon-2 show-on-theme-light"><i class="fas fa-moon"></i></a>
+        <a href="#" data-menu="menu-share" class="header-icon header-icon-3"><i class="fas fa-share-alt"></i></a>
+    </div>
+
+    <div id="footer-bar" class="footer-bar-6">
+        <a href="index-components.html"><i class="fa fa-hourglass-start"></i><span>Thiền định</span></a>
+        <a href="index-pages.html"><i class="fa fa-face-grin-beam active-nav"></i><span>Tâm trạng</span></a>
+        <a href="index.html" class="circle-nav"><i class="fa fa-home"></i><span>Trang chủ</span></a>
+        <a href="index-projects.html"><i class="fa fa-graduation-cap"></i><span>Thư viện</span></a>
+        <a href="#" data-menu="menu-main"><i class="fa fa-bars"></i><span>Menu</span></a>
+    </div>
+
+    <div class="page-content">
+
+        <div class="page-title page-title-fixed">
+            <h1>Theo dõi cảm xúc</h1>
+            <a href="#" class="page-title-icon shadow-xl bg-theme color-theme" data-menu="menu-share"><i class="fa fa-share-alt"></i></a>
+            <a href="#" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-light" data-toggle-theme><i class="fa fa-moon"></i></a>
+            <a href="#" class="page-title-icon shadow-xl bg-theme color-theme show-on-theme-dark" data-toggle-theme><i class="fa fa-lightbulb color-yellow-dark"></i></a>
+            <a href="#" class="page-title-icon shadow-xl bg-theme color-theme" data-menu="menu-main"><i class="fa fa-bars"></i></a>
+        </div>
+        <div class="page-title-clear"></div>
+        <div class="card card-style">
+            <div class="content mb-0">
+                <h3>Hãy cập nhật cảm xúc hiện tại của bạn</h3>
+                
+                <div class="mood-slider-container">
+                    <input type="range" min="1" max="5" value="3" class="mood-slider" id="moodSlider">
+                    <div class="mood-emoji" id="moodEmoji">😐</div> <!-- Neutral emoji as default -->
+                </div>
+    
+                <!-- <div class="checkbox-container">
+                    <input type="checkbox" id="otherMoodCheckbox" onclick="toggleOtherMood()">
+                    <label for="otherMoodCheckbox">Other</label>
+                </div>
+     -->
+                <div class="other-mood" id="otherMood">
+                    <input type="text" placeholder="Describe your mood...">
+                </div>
+            </div>
+        </div>    
+        
+        <div class="card card-style">
+            <div class="content mt-3 mb-0">
+                <!-- <p class="color-highlight font-600 mb-n1">Appkit Pages for</p> -->
+                <h1>Bạn đang làm gì khi bản thân cảm thấy <span class="emotion-name"></span></h1>
+                <!-- What were you doing section -->
+                <!-- Placeholder for the emotion -->    
+                <!-- Events section -->
+                <div class="section-title">Hoạt động</div>
+                <div class="label-buttons" id="eventButtons">
+                    <div class="label-button" onclick="toggleButton(this)">Làm việc</div>
+                    <div class="label-button" onclick="toggleButton(this)">Đang học</div>
+                    <!-- Add more event buttons as needed -->
+                </div>
+    
+                <!-- People section -->
+                <div class="section-title">Con người</div>
+                <div class="label-buttons" id="peopleButtons">
+                    <div class="label-button" onclick="toggleButton(this)">Ở một mình</div>
+                    <div class="label-button" onclick="toggleButton(this)">Với bạn bè</div>
+                    <!-- Add more people buttons as needed -->
+                </div>
+    
+                <!-- Places section -->
+                <div class="section-title">Địa điểm</div>
+                <div class="label-buttons" id="placeButtons">
+                    <div class="label-button" onclick="toggleButton(this)">Ở nhà</div>
+                    <div class="label-button" onclick="toggleButton(this)">Đang lái</div>
+                    <!-- Add more place buttons as needed -->
+                <div class="divider mb-0"></div>
+                <!-- <div class="list-group list-custom-small list-icon-0 check-visited">
+                    <a href="page-about.html"><i class="fa fa-user rounded-sm bg-red-dark"></i><span>About Us</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-careers.html"><i class="fa fa-handshake font-14 rounded-sm bg-green-light"></i><span>Careers</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-contact.html"><i class="fa fa-envelope font-14 rounded-sm bg-blue-light"></i><span>Contact</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-chat-list.html"><i class="fa fa-comments rounded-sm bg-teal-dark"></i><span>Chat Heads</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-chat.html"><i class="fa fa-comments rounded-sm bg-green-dark"></i><span>Chat List</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-cover.html"><i class="fa fa-image rounded-sm bg-red-dark"></i><span>Coverpage</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-interests.html"><i class="fa fa-check-circle rounded-sm bg-teal-dark"></i><span>Interests</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-instants.html"><i class="fa fa-bolt rounded-sm bg-yellow-dark"></i><span>Instants</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-profile-1.html"><i class="fa fa-user rounded-sm bg-blue-dark"></i><span>Profile Classic</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-profile-2.html"><i class="fa fa-user rounded-sm bg-green-dark"></i><span>Profile Views</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-profile-3.html"><i class="fa fa-user rounded-sm bg-instagram color-white"></i><span>Profile Instagram</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-user-edit.html"><i class="fa fa-user rounded-sm bg-teal-dark"></i><span>Profile Edit</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-timeline-1.html"><i class="fa fa-list rounded-sm bg-brown-light"></i><span>Timeline Center</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-timeline-2.html"><i class="fa fa-list rounded-sm bg-teal-dark"></i><span>Timeline Left</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-team.html"><i class="fa fa-users rounded-sm bg-orange-dark"></i><span>Team Page</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-vcard.html"><i class="fa fa-id-card rounded-sm bg-brown-dark"></i><span>V-Card</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-dashboard.html"><i class="fa fa-cloud rounded-sm bg-blue-dark"></i><span>Dashboard</span><i class="fa fa-angle-right"></i></a>
+
+                    <h5 class="font-600 font-13 opacity-50 mt-4 mb-n1">Maintenance Pages<i class="fa fa-chevron-down float-end mt-n3 font-8"></i></h5>
+                    <a href="page-colors.html"><i class="fa fa-tint rounded-sm bg-red-dark"></i><span>Colors</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-system-status.html"><i class="fa fa-server rounded-sm bg-magenta-light"></i><span>System Status</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-maintenance.html"><i class="fa fa-server rounded-sm bg-green-light"></i><span>Maintenance Status</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-terms.html"><i class="fa fa-copyright rounded-sm bg-blue-dark"></i><span>Terms of Service</span><i class="fa fa-angle-right"></i></a>
+                    <a href="page-construction-1.html"><i class="fa fa-clock rounded-sm bg-brown-dark"></i><span>Under Construction</span><i class="fa fa-angle-right"></i></a>
+
+                </div> -->
+                <!-- <p class="font-11 opacity-70 font-italic line-height-s pt-4 pb-4"><strong class="color-highlight">Note</strong>. When selecting a page, and coming back, it will be marked with a <i class="fa fa-check-circle color-green-dark ps-1 pe-1"></i> icon to make it easier for you to keep track of pages you've visited.</p> -->
+
+            </div>
+        </div>
+</div>
+        <div class="card card-style">
+            <div class="content mt-3 mb-0">
+                <h1>Hãy viết ra những điều có thể làm cho bạn cảm thấy <span class="emotion-name"></span></h1>
+                
+                <!-- Textarea for user input -->
+                <textarea id="userThoughts" rows="4" placeholder="Write your thoughts here..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;"></textarea>
+    
+                <!-- Existing content -->
+                <p class="font-11 opacity-70 font-italic line-height-s pt-4 pb-4">
+                    <!-- <strong class="color-highlight">Note</strong>. When selecting a page, and coming back, it will be marked with a <i class="fa fa-check-circle color-green-dark ps-1 pe-1"></i> icon to make it easier for you to keep track of pages you've visited. -->
+                </p>
+            </div>
+        </div>
+    
+
+        
+
+        <!-- <a href="index-components.html" class="card card-style mb-3">
+            <div class="content mt-3">
+                <div class="d-flex">
+                    <div class="align-self-center">
+                        <p class="color-highlight font-600 mb-n1">Pages work great with</p>
+                        <h3 class="font-24 mb-0">Components</h3>
+                    </div>
+                    <div class="align-self-center ms-auto">
+                        <span class="btn btn-xs rounded-sm gradient-highlight font-700 text-uppercase mt-2">View</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="list-system.html" class="card card-style">
+            <div class="content mt-3">
+                <div class="d-flex">
+                    <div class="align-self-center">
+                        <p class="color-highlight font-600 mb-n1">Pages work great with</p>
+                        <h3 class="font-24 mb-0">System Pack</h3>
+                    </div>
+                    <div class="align-self-center ms-auto">
+                        <span class="btn btn-xs rounded-sm gradient-highlight font-700 text-uppercase mt-2">View</span>
+                    </div>
+                </div>
+            </div>
+        </a> -->
+
+
+
+
+
+        <div class="card card-style">
+            <div class="content mt-3" style="padding: 10px;">
+                <h1 style="margin-bottom: 5px;">Thời tiết hiện tại</h1>
+                <div id="weatherInfo" style="margin-bottom: 5px;">
+                    <!-- Displaying the current date -->
+                    <p id="currentDate" style="margin-bottom: 5px;">Chủ Nhật, Ngày 10 Tháng 12</p>
+        
+                    <!-- Weather information -->
+                    <div id="weatherCondition">
+                        <p style="margin-bottom: 5px;">Thời tiết: <span id="weatherConditionText">Trời nắng</span></p>
+                        <p style="margin-bottom: 5px;">Nhiệt độ: <span id="weatherTemperature">25°C</span></p>
+                    </div>
+                </div>
+        
+                <!-- Exercise time picker -->
+                <div style="margin-bottom: 5px;">
+                    <label>Bạn dành bao nhiêu thời gian thể thao ngày hôm nay?</label><br>
+                    <select id="exerciseHours" style="width: 48%; margin-right: 2%;">
+                        <!-- Options for hours -->
+                    </select>
+                    <span>tiếng</span>
+                    <select id="exerciseMinutes" style="width: 48%; margin-left: 2%;">
+                        <!-- Options for minutes -->
+                    </select>
+                    <span>phút</span>
+                </div>
+        
+                <!-- Sleep duration slider -->
+                <div style="margin-bottom: 5px;">
+                    <label for="sleepDuration">Bạn ngủ bao nhiêu tiếng ngày hôm nay?</label>
+                    <input type="range" id="sleepDuration" min="0" max="10" class="custom-slider">
+                    <span id="sleepDurationDisplay">0 tiếng</span>
+                </div>
+                <!-- Popup for successful save -->
+                <div id="successPopup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5); z-index: 100;">
+                </div>
+                <!-- <a href="javascript:void(0);" class="default-link btn btn-full gradient-highlight btn-m rounded-sm text-uppercase font-700 mb-2" id="saveLink">Lưu vào nhật ký</a> -->
+                <a data-menu="menu-success-2" href="javascript:void(0);" class="default-link btn btn-full gradient-highlight btn-m rounded-sm text-uppercase font-700 mb-2" id="saveLink">Lưu vào nhật ký</a>
+                <!-- <p class="font-11 text-center" style="margin-top: 5px;"><i class="fa fa-info-circle font-10 pe-1"></i>This link will take you to our website's Feedback Form</p> -->
+  
+         
+            </div>
+        </div>
+                                        
+
+        <div data-menu-load="menu-footer.html"></div>
+    </div>
+
+    <div id="menu-success-2" 
+    class="menu menu-box-modal bg-green-dark rounded-m" 
+    data-menu-height="310" 
+    data-menu-width="350">
+   <h1 class="text-center mt-4"><i class="fa fa-3x fa-check-circle scale-box color-white shadow-xl rounded-circle"></i></h1>
+   <h1 class="text-center mt-3 font-700 color-white">Đã lưu thành công</h1>
+   <p class="boxed-text-l color-white opacity-70">
+        Cảm ơn bạn đã cập nhật trạng thái ngày hôm nay!
+   </p>
+   <a href="#" class="close-menu btn btn-m btn-center-m button-s shadow-l rounded-s text-uppercase font-600 bg-white color-black" id="okButton">        <button id="okButton">OK</button></a>
+
+</div>   
+
+
+    <!-- Page content ends here-->
+
+    <!-- Main Menu-->
+    <div id="menu-main" class="menu menu-box-left rounded-0" data-menu-load="menu-main.html" data-menu-width="280" data-menu-active="nav-welcome"></div>
+
+    <!-- Share Menu-->
+    <div id="menu-share" class="menu menu-box-bottom rounded-m" data-menu-load="menu-share.html" data-menu-height="370"></div>
+
+    <!-- Colors Menu-->
+    <div id="menu-colors" class="menu menu-box-bottom rounded-m" data-menu-load="menu-colors.html" data-menu-height="480"></div>
+
+
+</div>
+<script type="text/javascript" src="scripts/list-multipurpose.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+</body>

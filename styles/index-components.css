@@ -1,0 +1,44 @@
+/* MEDITATION MODES - INDEX-COMPONENTS.HTML */
+
+.list-group.list-custom-large.check-visited a {
+    display: block; /* Ensures each link is a block-level element */
+    width: 100%; /* Each link takes full width */
+    margin-bottom: 10px; /* Adds space between each link */
+    clear: both; /* Clears left and right floats */
+}
+
+/* Override flex or grid if used */
+.list-group.list-custom-large.check-visited {
+    display: block;
+}
+
+/* TIMER */
+
+.countdown-circle {
+    /* Example styling for the timer circle */
+    border: 5px solid #fff; /* white border */
+    border-radius: 50%; /* circle shape */
+    width: 150px; /* circle size */
+    height: 150px; /* circle size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; /* centering the circle */
+
+    #timer-display {
+    font-size: 2em;
+    color: white;
+}
+}
+
+/* ADJUST TITLES TO TURN WHITE WHEN DARK MODE IS ENABLED */
+  /* Default link styles for light mode */
+  .card-style a {
+    color: black;
+    text-decoration: none;
+  }
+
+  /* Link styles for dark mode */
+  body.theme-dark .card-style a {
+    color: white;
+  }
